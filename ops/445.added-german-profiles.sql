@@ -327,7 +327,7 @@ select cf.name, '1080p', 'resolution', 'all', 0, 1
 from custom_formats cf
 where cf.name = 'German 1080p Booster';
 
-insert into condition_resolutions (custom_format_name, condition_name, resolutione)
+insert into condition_resolutions (custom_format_name, condition_name, resolution)
 values ('German 1080p Booster', '1080p', '1080p');
 -- --- END op 6875
 
