@@ -499,7 +499,7 @@ select cf.name, 'Bluray', 'source', 'all', 0, 1
 from custom_formats cf
 where cf.name = 'German Bluray Tier 02';
 
-insert into condition_sources (custom_format_name, condition_name, source_name)
+insert into condition_sources (custom_format_name, condition_name, source)
 values ('German Bluray Tier 02', 'Bluray', 'bluray');
 
 insert into custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
@@ -539,7 +539,7 @@ select cf.name, 'Bluray', 'source', 'all', 0, 1
 from custom_formats cf
 where cf.name = 'German Bluray Tier 03';
 
-insert into condition_sources (custom_format_name, condition_name, source_name)
+insert into condition_sources (custom_format_name, condition_name, source)
 values ('German Bluray Tier 03', 'Bluray', 'bluray');
 
 insert into custom_format_conditions (custom_format_name, name, type, arr_type, negate, required)
