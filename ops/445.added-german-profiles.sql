@@ -2,10 +2,10 @@
 -- @entity: batch
 -- @name: Added German Profiles
 -- @exportedAt: 2026-10-27T00:05:37.345Z
--- @opIds: 
+-- @opIds: 6853, 6854, 6855, 6856, 6857, 6858, 6859, 6860, 6861, 6862, 6863, 6864, 6865, 6866, 6867, 6868, 6869, 6870, 6871, 6872, 6873, 6874, 6875, 6876, 6877, 6878, 6879, 6880, 6881, 6882, 6883, 6884, 6885, 6886, 6887, 6888, 6889, 6890, 6891, 6892, 6893, 6894, 6895, 6896, 6897, 6898, 6899, 6900, 6901, 6902, 6903
 
 -- --- BEGIN op 6853 ( create regular_expression "DL" )
-insert into "regular_expressions" ("name", "parttern", "description", "regex101_id") values ('DL', '(?<!WEB[-_. ]?)\b(DL)\b', null, null);
+insert into "regular_expressions" ("name", "pattern", "description", "regex101_id") values ('DL', '(?<!WEB[-_. ]?)\b(DL)\b', null, null);
 
 insert into "tags" ("name") values ('Release Title') on conflict ("name") do nothing;
 
@@ -13,7 +13,7 @@ insert into regular_expression_tags (regular_expression_name, tag_name) values (
 -- --- END op 6853
 
 -- --- BEGIN op 6854 ( create regular_expression "Double German Tag" )
-insert into "regular_expressions" ("name", "parttern", "description", "regex101_id") values ('Double German Tag', '[._-]German[._-].+?[._-]?German$', null, null);
+insert into "regular_expressions" ("name", "pattern", "description", "regex101_id") values ('Double German Tag', '[._-]German[._-].+?[._-]?German$', null, null);
 
 insert into "tags" ("name") values ('Release Title') on conflict ("name") do nothing;
 insert into "tags" ("name") values ('Banned') on conflict ("name") do nothing;
@@ -25,7 +25,7 @@ insert into regular_expression_tags (regular_expression_name, tag_name) values (
 -- --- END op 6854
 
 -- --- BEGIN op 6855 ( create regular_expression "German Anime Tier 01" )
-insert into "regular_expressions" ("name", "parttern", "description", "regex101_id") values ('German Anime Tier 01', '(?i)(?:^\[|(?<=-)|(?<=\[))(?:ABJ|ANiMEHD|DRiFTKiNG|iFPD|LiEFERDiENST|ONiGiRi|snk|STARS|TvR|ZeroTwo)(?:\]|\b|$)', null, null);
+insert into "regular_expressions" ("name", "pattern", "description", "regex101_id") values ('German Anime Tier 01', '(?i)(?:^\[|(?<=-)|(?<=\[))(?:ABJ|ANiMEHD|DRiFTKiNG|iFPD|LiEFERDiENST|ONiGiRi|snk|STARS|TvR|ZeroTwo)(?:\]|\b|$)', null, null);
 
 insert into "tags" ("name") values ('Anime') on conflict ("name") do nothing;
 insert into "tags" ("name") values ('Release Group') on conflict ("name") do nothing;
@@ -37,7 +37,7 @@ insert into regular_expression_tags (regular_expression_name, tag_name) values (
 -- --- END op 6855
 
 -- --- BEGIN op 6856 ( create regular_expression "German Anime Tier 02" )
-insert into "regular_expressions" ("name", "parttern", "description", "regex101_id") values ('German Anime Tier 02', '(?i)(?:^\[|(?<=-)|(?<=\[))(?:CNY|LiEFERDiENST|SAViOURHD|SharpHD|SUBARU|WAREZCX)(?:\]|\b|$)', null, null);
+insert into "regular_expressions" ("name", "pattern", "description", "regex101_id") values ('German Anime Tier 02', '(?i)(?:^\[|(?<=-)|(?<=\[))(?:CNY|LiEFERDiENST|SAViOURHD|SharpHD|SUBARU|WAREZCX)(?:\]|\b|$)', null, null);
 
 insert into "tags" ("name") values ('Anime') on conflict ("name") do nothing;
 insert into "tags" ("name") values ('Release Group') on conflict ("name") do nothing;
@@ -49,7 +49,7 @@ insert into regular_expression_tags (regular_expression_name, tag_name) values (
 -- --- END op 6856
 
 -- --- BEGIN op 6857 ( create regular_expression "German Bluray Tier 01" )
-insert into "regular_expressions" ("name", "parttern", "description", "regex101_id") values ('German Bluray Tier 01', '(?<=^|[\s.-])(ZeroTwo|BUTTERCUP|HARTZ02|XiSS|DOGPACK404|PRiNCESSDiANA|DiVA|WAREZCX|BiTCHNUGGET|TSCC|TvR|NIMA4K|TVS|PXL|CNY|WeebPinn|MAMA|WalterBishop)\b', null, null);
+insert into "regular_expressions" ("name", "pattern", "description", "regex101_id") values ('German Bluray Tier 01', '(?<=^|[\s.-])(ZeroTwo|BUTTERCUP|HARTZ02|XiSS|DOGPACK404|PRiNCESSDiANA|DiVA|WAREZCX|BiTCHNUGGET|TSCC|TvR|NIMA4K|TVS|PXL|CNY|WeebPinn|MAMA|WalterBishop)\b', null, null);
 
 insert into "tags" ("name") values ('Release Group Tier') on conflict ("name") do nothing;
 insert into "tags" ("name") values ('German') on conflict ("name") do nothing;
@@ -59,7 +59,7 @@ insert into regular_expression_tags (regular_expression_name, tag_name) values (
 -- --- END op 6857
 
 -- --- BEGIN op 6858 ( create regular_expression "German Bluray Tier 02" )
-insert into "regular_expressions" ("name", "parttern", "description", "regex101_id") values ('German Bluray Tier 02', '(?<=^|[\s.-])(VECTOR|MULTiPLEX|SiXTYNiNE|Oergel|ABJ|paranoid06|RocketHD)\b', null, null);
+insert into "regular_expressions" ("name", "pattern", "description", "regex101_id") values ('German Bluray Tier 02', '(?<=^|[\s.-])(VECTOR|MULTiPLEX|SiXTYNiNE|Oergel|ABJ|paranoid06|RocketHD)\b', null, null);
 
 insert into "tags" ("name") values ('Release Group Tier') on conflict ("name") do nothing;
 insert into "tags" ("name") values ('German') on conflict ("name") do nothing;
@@ -69,7 +69,7 @@ insert into regular_expression_tags (regular_expression_name, tag_name) values (
 -- --- END op 6858
 
 -- --- BEGIN op 6859 ( create regular_expression "German Bluray Tier 03" )
-insert into "regular_expressions" ("name", "parttern", "description", "regex101_id") values ('German Bluray Tier 03', '(?<=^|[\s.-])(RobertDeNiro|LeetHD|RHD|HDSource|UNFIrED|iNCEPTION|FX|RDR)\b', null, null);
+insert into "regular_expressions" ("name", "pattern", "description", "regex101_id") values ('German Bluray Tier 03', '(?<=^|[\s.-])(RobertDeNiro|LeetHD|RHD|HDSource|UNFIrED|iNCEPTION|FX|RDR)\b', null, null);
 
 insert into "tags" ("name") values ('Release Group Tier') on conflict ("name") do nothing;
 insert into "tags" ("name") values ('German') on conflict ("name") do nothing;
@@ -79,7 +79,7 @@ insert into regular_expression_tags (regular_expression_name, tag_name) values (
 -- --- END op 6859
 
 -- --- BEGIN op 6860 ( create regular_expression "German LQ" )
-insert into "regular_expressions" ("name", "parttern", "description", "regex101_id") values ('German LQ', '(?<=^|[\s.-])(PsO|Cancer58|Tylor.D|1XBET|2dead|HELD|kala|POE|SHOWE|SHOWEHD|ORCA88|LuRCH|N2D2|GETB8|TFARC|Kristallprinz|LAW|CTFOH|Pendeti|OJ|PS|FSX|EMVY|ZaidaNulled|MEGA|MBA|FORMBA|PaZ|Whistler|omikron|WOTT|SunDry|PL|TVARCHiV|P73|LizardSquad|AVTOMAT|iSSEYMiYAKE|TVP|AIDA|UTOPiA|FRAGGERS|REEL|VideoStar)\b', null, null);
+insert into "regular_expressions" ("name", "pattern", "description", "regex101_id") values ('German LQ', '(?<=^|[\s.-])(PsO|Cancer58|Tylor.D|1XBET|2dead|HELD|kala|POE|SHOWE|SHOWEHD|ORCA88|LuRCH|N2D2|GETB8|TFARC|Kristallprinz|LAW|CTFOH|Pendeti|OJ|PS|FSX|EMVY|ZaidaNulled|MEGA|MBA|FORMBA|PaZ|Whistler|omikron|WOTT|SunDry|PL|TVARCHiV|P73|LizardSquad|AVTOMAT|iSSEYMiYAKE|TVP|AIDA|UTOPiA|FRAGGERS|REEL|VideoStar)\b', null, null);
 
 insert into "tags" ("name") values ('Release Group') on conflict ("name") do nothing;
 insert into "tags" ("name") values ('Banned') on conflict ("name") do nothing;
@@ -91,7 +91,7 @@ insert into regular_expression_tags (regular_expression_name, tag_name) values (
 -- --- END op 6860
 
 -- --- BEGIN op 6861 ( create regular_expression "German Microsized" )
-insert into "regular_expressions" ("name", "parttern", "description", "regex101_id") values ('German Microsized', '(?<=^|[\s.-])(FuN|w00t|GTF|JellyfinPlex|BB|266ers)\b', null, null);
+insert into "regular_expressions" ("name", "pattern", "description", "regex101_id") values ('German Microsized', '(?<=^|[\s.-])(FuN|w00t|GTF|JellyfinPlex|BB|266ers)\b', null, null);
 
 insert into "tags" ("name") values ('Release Group') on conflict ("name") do nothing;
 insert into "tags" ("name") values ('Banned') on conflict ("name") do nothing;
@@ -103,7 +103,7 @@ insert into regular_expression_tags (regular_expression_name, tag_name) values (
 -- --- END op 6861
 
 -- --- BEGIN op 6862 ( create regular_expression "German Remux Tier 01" )
-insert into "regular_expressions" ("name", "parttern", "description", "regex101_id") values ('German Remux Tier 01', '(?<=^|[\s.-])(TvR|pmHD|NIMA4K|QfG|WeebPinn|MAMA)\b', null, null);
+insert into "regular_expressions" ("name", "pattern", "description", "regex101_id") values ('German Remux Tier 01', '(?<=^|[\s.-])(TvR|pmHD|NIMA4K|QfG|WeebPinn|MAMA)\b', null, null);
 
 insert into "tags" ("name") values ('Release Group Tier') on conflict ("name") do nothing;
 insert into "tags" ("name") values ('German') on conflict ("name") do nothing;
@@ -113,7 +113,7 @@ insert into regular_expression_tags (regular_expression_name, tag_name) values (
 -- --- END op 6862
 
 -- --- BEGIN op 6863 ( create regular_expression "German Remux Tier 02" )
-insert into "regular_expressions" ("name", "parttern", "description", "regex101_id") values ('German Remux Tier 02', '(?<=^|[\s.-])(MULTiPLEX|RHD|HDSource|iNCEPTION|FX|RocketHD)\b', null, null);
+insert into "regular_expressions" ("name", "pattern", "description", "regex101_id") values ('German Remux Tier 02', '(?<=^|[\s.-])(MULTiPLEX|RHD|HDSource|iNCEPTION|FX|RocketHD)\b', null, null);
 
 insert into "tags" ("name") values ('Release Group Tier') on conflict ("name") do nothing;
 insert into "tags" ("name") values ('German') on conflict ("name") do nothing;
@@ -123,7 +123,7 @@ insert into regular_expression_tags (regular_expression_name, tag_name) values (
 -- --- END op 6863
 
 -- --- BEGIN op 6864 ( create regular_expression "German Scene" )
-insert into "regular_expressions" ("name", "parttern", "description", "regex101_id") values ('German Scene', '(?<=^|[\s.-])(DETAiLS|WAYNE|WOMBAT|SAUERKRAUT|WvF|4KCONNECTiON|STARS|AWARDS|DMPD|EXCiTED|iNTENTiON|JaJunge|MGE|MisFiTS|RUBBiSH|RWP|TMSF|TV4A|HAXE|muhHD|RiLE|W4K|ENDSTATiON|HDARCHiV|PL3X|WATCHABLE|OHD|ENCOUNTERS|RSG|OCA|UNDERTAKERS|CDP|SAViOURHD|RiLE|CONTRiBUTiON|GOREHOUNDS|SPiCY|bi0hazard)\b', null, null);
+insert into "regular_expressions" ("name", "pattern", "description", "regex101_id") values ('German Scene', '(?<=^|[\s.-])(DETAiLS|WAYNE|WOMBAT|SAUERKRAUT|WvF|4KCONNECTiON|STARS|AWARDS|DMPD|EXCiTED|iNTENTiON|JaJunge|MGE|MisFiTS|RUBBiSH|RWP|TMSF|TV4A|HAXE|muhHD|RiLE|W4K|ENDSTATiON|HDARCHiV|PL3X|WATCHABLE|OHD|ENCOUNTERS|RSG|OCA|UNDERTAKERS|CDP|SAViOURHD|RiLE|CONTRiBUTiON|GOREHOUNDS|SPiCY|bi0hazard)\b', null, null);
 
 insert into "tags" ("name") values ('Release Group') on conflict ("name") do nothing;
 insert into "tags" ("name") values ('German') on conflict ("name") do nothing;
@@ -133,7 +133,7 @@ insert into regular_expression_tags (regular_expression_name, tag_name) values (
 -- --- END op 6864
 
 -- --- BEGIN op 6865 ( create regular_expression "German Web Tier 01" )
-insert into "regular_expressions" ("name", "parttern", "description", "regex101_id") values ('German Web Tier 01', '(?<=^|[\s.-])(ZeroTwo|BUTTERCUP|HARTZ02|XiSS|DOGPACK404|PRiNCESSDiANA|DiVA|WAREZCX|BiTCHNUGGET|TSCC|TvR|NIMA4K|TVS|D02KU|PXL|QfG|CNY|WeebPinn|MEDiATHEK|RiiR|TOJ|WalterBishop|pmHD)\b', null, null);
+insert into "regular_expressions" ("name", "pattern", "description", "regex101_id") values ('German Web Tier 01', '(?<=^|[\s.-])(ZeroTwo|BUTTERCUP|HARTZ02|XiSS|DOGPACK404|PRiNCESSDiANA|DiVA|WAREZCX|BiTCHNUGGET|TSCC|TvR|NIMA4K|TVS|D02KU|PXL|QfG|CNY|WeebPinn|MEDiATHEK|RiiR|TOJ|WalterBishop|pmHD)\b', null, null);
 
 insert into "tags" ("name") values ('Release Group Tier') on conflict ("name") do nothing;
 insert into "tags" ("name") values ('German') on conflict ("name") do nothing;
@@ -143,7 +143,7 @@ insert into regular_expression_tags (regular_expression_name, tag_name) values (
 -- --- END op 6865
 
 -- --- BEGIN op 6866 ( create regular_expression "German Web Tier 02" )
-insert into "regular_expressions" ("name", "parttern", "description", "regex101_id") values ('German Web Tier 02', '(?<=^|[\s.-])(VECTOR|MULTiPLEX|SiXTYNiNE|Oergel|4SF|ABJ|paranoid06)\b', null, null);
+insert into "regular_expressions" ("name", "pattern", "description", "regex101_id") values ('German Web Tier 02', '(?<=^|[\s.-])(VECTOR|MULTiPLEX|SiXTYNiNE|Oergel|4SF|ABJ|paranoid06)\b', null, null);
 
 insert into "tags" ("name") values ('Release Group Tier') on conflict ("name") do nothing;
 insert into "tags" ("name") values ('German') on conflict ("name") do nothing;
@@ -153,7 +153,7 @@ insert into regular_expression_tags (regular_expression_name, tag_name) values (
 -- --- END op 6866
 
 -- --- BEGIN op 6867 ( create regular_expression "German Web Tier 03" )
-insert into "regular_expressions" ("name", "parttern", "description", "regex101_id") values ('German Web Tier 03', '(?<=^|[\s.-])(RobertDeNiro|BALENCiAGA|HDSource|FX|RDR)\b', null, null);
+insert into "regular_expressions" ("name", "pattern", "description", "regex101_id") values ('German Web Tier 03', '(?<=^|[\s.-])(RobertDeNiro|BALENCiAGA|HDSource|FX|RDR)\b', null, null);
 
 insert into "tags" ("name") values ('Release Group Tier') on conflict ("name") do nothing;
 insert into "tags" ("name") values ('German') on conflict ("name") do nothing;
@@ -163,7 +163,7 @@ insert into regular_expression_tags (regular_expression_name, tag_name) values (
 -- --- END op 6867
 
 -- --- BEGIN op 6868 ( create regular_expression "Jellyfin-Plex" )
-insert into "regular_expressions" ("name", "parttern", "description", "regex101_id") values ('Jellyfin-Plex', 'Jellyfin-Plex$', null, null);
+insert into "regular_expressions" ("name", "pattern", "description", "regex101_id") values ('Jellyfin-Plex', 'Jellyfin-Plex$', null, null);
 
 insert into "tags" ("name") values ('Release Title') on conflict ("name") do nothing;
 insert into "tags" ("name") values ('Banned') on conflict ("name") do nothing;
@@ -175,7 +175,7 @@ insert into regular_expression_tags (regular_expression_name, tag_name) values (
 -- --- END op 6868
 
 -- --- BEGIN op 6869 ( create regular_expression "ML" )
-insert into "regular_expressions" ("name", "parttern", "description", "regex101_id") values ('ML', '\b(ML)\b', null, null);
+insert into "regular_expressions" ("name", "pattern", "description", "regex101_id") values ('ML', '\b(ML)\b', null, null);
 
 insert into "tags" ("name") values ('Release Title') on conflict ("name") do nothing;
 
@@ -183,7 +183,7 @@ insert into regular_expression_tags (regular_expression_name, tag_name) values (
 -- --- END op 6869
 
 -- --- BEGIN op 6870 ( create regular_expression "Not German in Title" )
-insert into "regular_expressions" ("name", "parttern", "description", "regex101_id") values ('Not German in Title', '(?i)\bgerman\b', null, null);
+insert into "regular_expressions" ("name", "pattern", "description", "regex101_id") values ('Not German in Title', '(?i)\bgerman\b', null, null);
 
 insert into "tags" ("name") values ('Release Title') on conflict ("name") do nothing;
 insert into "tags" ("name") values ('German') on conflict ("name") do nothing;
@@ -193,7 +193,7 @@ insert into regular_expression_tags (regular_expression_name, tag_name) values (
 -- --- END op 6870
 
 -- --- BEGIN op 6871 ( create regular_expression "Not Subbed" )
-insert into "regular_expressions" ("name", "parttern", "description", "regex101_id") values ('Not Subbed', '(?=.*(German|Ger))(?=.*(Sub|Multi(ple)?Sub))', null, null);
+insert into "regular_expressions" ("name", "pattern", "description", "regex101_id") values ('Not Subbed', '(?=.*(German|Ger))(?=.*(Sub|Multi(ple)?Sub))', null, null);
 
 insert into "tags" ("name") values ('Release Title') on conflict ("name") do nothing;
 insert into "tags" ("name") values ('German') on conflict ("name") do nothing;
@@ -203,7 +203,7 @@ insert into regular_expression_tags (regular_expression_name, tag_name) values (
 -- --- END op 6871
 
 -- --- BEGIN op 6872 ( create regular_expression "TVS iTunesHD" )
-insert into "regular_expressions" ("name", "parttern", "description", "regex101_id") values ('TVS iTunesHD', '([._-])iTunes(?:HD|SD)?\\1.+?-TVS$', null, null);
+insert into "regular_expressions" ("name", "pattern", "description", "regex101_id") values ('TVS iTunesHD', '([._-])iTunes(?:HD|SD)?\\1.+?-TVS$', null, null);
 
 insert into "tags" ("name") values ('Release Title') on conflict ("name") do nothing;
 insert into "tags" ("name") values ('Banned') on conflict ("name") do nothing;
