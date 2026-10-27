@@ -253,7 +253,7 @@ select cf.name, 'Not Single Language Only', 'release_title', 'all', 0, 1
 from custom_formats cf
 where cf.name = 'Anime German DL';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'Anime German DL', 'Not Single Language Only', re.name
 from regular_expressions re
 where re.name = 'Anime Single Language';
@@ -396,7 +396,7 @@ select cf.name, 'German Anime Tier 01', 'release_group', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'German Anime Tier 01';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'German Anime Tier 01', 'German Anime Tier 01', re.name
 from regular_expressions re
 where re.name = 'German Anime Tier 01';
@@ -425,7 +425,7 @@ select cf.name, 'German Anime Tier 02', 'release_group', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'German Anime Tier 02';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'German Anime Tier 02', 'German Anime Tier 02', re.name
 from regular_expressions re
 where re.name = 'German Anime Tier 02';
@@ -449,7 +449,7 @@ select cf.name, 'German Bluray Tier 01', 'release_group', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'German Bluray Tier 01';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'German Bluray Tier 01', 'German Bluray Tier 01', re.name
 from regular_expressions re
 where re.name = 'German Bluray Tier 01';
@@ -489,7 +489,7 @@ select cf.name, 'German Bluray Tier 02', 'release_group', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'German Bluray Tier 02';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'German Bluray Tier 02', 'German Bluray Tier 02', re.name
 from regular_expressions re
 where re.name = 'German Bluray Tier 02';
@@ -529,7 +529,7 @@ select cf.name, 'German Bluray Tier 03', 'release_group', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'German Bluray Tier 03';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'German Bluray Tier 03', 'German Bluray Tier 03', re.name
 from regular_expressions re
 where re.name = 'German Bluray Tier 03';
@@ -574,7 +574,7 @@ select cf.name, 'DL', 'release_title', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'German DL (undefined)';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'German DL (undefined)', 'DL', re.name
 from regular_expressions re
 where re.name = 'DL';
@@ -584,7 +584,7 @@ select cf.name, 'ML', 'release_title', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'German DL (undefined)';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'German DL (undefined)', 'ML', re.name
 from regular_expressions re
 where re.name = 'ML';
@@ -642,7 +642,7 @@ select cf.name, 'TVS iTunesHD', 'release_title', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'German LQ (Release Title)';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'German LQ (Release Title)', 'TVS iTunesHD', re.name
 from regular_expressions re
 where re.name = 'TVS iTunesHD';
@@ -652,7 +652,7 @@ select cf.name, 'Jellyfin-Plex', 'release_title', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'German LQ (Release Title)';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'German LQ (Release Title)', 'Jellyfin-Plex', re.name
 from regular_expressions re
 where re.name = 'Jellyfin-Plex';
@@ -662,7 +662,7 @@ select cf.name, 'Double German Tag', 'release_title', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'German LQ (Release Title)';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'German LQ (Release Title)', 'Double German Tag', re.name
 from regular_expressions re
 where re.name = 'Double German Tag';
@@ -691,7 +691,7 @@ select cf.name, 'German LQ', 'release_group', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'German LQ';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'German LQ', 'German LQ', re.name
 from regular_expressions re
 where re.name = 'German LQ';
@@ -720,7 +720,7 @@ select cf.name, 'German Microsized', 'release_group', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'German Microsized';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'German Microsized', 'German Microsized', re.name
 from regular_expressions re
 where re.name = 'German Microsized';
@@ -744,7 +744,7 @@ select cf.name, 'German Remux Tier 01', 'release_group', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'German Remux Tier 01';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'German Remux Tier 01', 'German Remux Tier 01', re.name
 from regular_expressions re
 where re.name = 'German Remux Tier 01';
@@ -776,7 +776,7 @@ select cf.name, 'German Remux Tier 02', 'release_group', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'German Remux Tier 02';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'German Remux Tier 02', 'German Remux Tier 02', re.name
 from regular_expressions re
 where re.name = 'German Remux Tier 02';
@@ -808,7 +808,7 @@ select cf.name, 'German Scene', 'release_group', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'German Scene';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'German Scene', 'German Scene', re.name
 from regular_expressions re
 where re.name = 'German Scene';
@@ -832,7 +832,7 @@ select cf.name, 'German Web Tier 01', 'release_group', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'German Web Tier 01';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'German Web Tier 01', 'German Web Tier 01', re.name
 from regular_expressions re
 where re.name = 'German Web Tier 01';
@@ -856,7 +856,7 @@ select cf.name, 'German Web Tier 02', 'release_group', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'German Web Tier 02';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'German Web Tier 02', 'German Web Tier 02', re.name
 from regular_expressions re
 where re.name = 'German Web Tier 02';
@@ -880,7 +880,7 @@ select cf.name, 'German Web Tier 03', 'release_group', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'German Web Tier 03';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'German Web Tier 03', 'German Web Tier 03', re.name
 from regular_expressions re
 where re.name = 'German Web Tier 03';
@@ -919,7 +919,7 @@ select cf.name, 'DL', 'release_title', 'all', 1, 1
 from custom_formats cf
 where cf.name = 'German';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'German', 'DL', re.name
 from regular_expressions re
 where re.name = 'DL';
@@ -929,7 +929,7 @@ select cf.name, 'ML', 'release_title', 'all', 1, 1
 from custom_formats cf
 where cf.name = 'German';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'German', 'ML', re.name
 from regular_expressions re
 where re.name = 'ML';
@@ -939,7 +939,7 @@ select cf.name, 'Not Subbed', 'release_title', 'all', 1, 1
 from custom_formats cf
 where cf.name = 'German';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'German', 'Not Subbed', re.name
 from regular_expressions re
 where re.name = 'Not Subbed';
@@ -983,7 +983,7 @@ select cf.name, 'Not German in Title', 'release_title', 'all', 1, 1
 from custom_formats cf
 where cf.name = 'Not German or English';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'Not German or English', 'Not German in Title', re.name
 from regular_expressions re
 where re.name = 'Not German in Title';
@@ -1002,7 +1002,7 @@ select cf.name, 'x264', 'release_title', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'x264';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'x264', 'x264', re.name
 from regular_expressions re
 where re.name = 'x264';
@@ -1012,7 +1012,7 @@ select cf.name, 'h264', 'release_title', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'x264';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'x264', 'h264', re.name
 from regular_expressions re
 where re.name = 'h264';
@@ -1031,7 +1031,7 @@ select cf.name, 'x265', 'release_title', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'x265';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'x265', 'x265', re.name
 from regular_expressions re
 where re.name = 'x265';
@@ -1041,7 +1041,7 @@ select cf.name, 'h265', 'release_title', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'x265';
 
-insert into conditions_patterns (custom_format_name, condition_name, regular_expression_name)
+insert into condition_patterns (custom_format_name, condition_name, regular_expression_name)
 select 'x265', 'h265', re.name
 from regular_expressions re
 where re.name = 'h265';
