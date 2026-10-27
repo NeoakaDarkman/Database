@@ -243,7 +243,7 @@ select cf.name, 'German', 'language', 'all', 0, 1
 from custom_formats cf
 where cf.name = 'Anime German DL';
 
-insert into condition_languages (custom_format_name. condition_name, language_name, except_language)
+insert into condition_languages (custom_format_name, condition_name, language_name, except_language)
 select 'Anime German DL', 'German', l.name, 0
 from languages l
 where l.name = 'German';
@@ -263,7 +263,7 @@ select cf.name, 'Japanese', 'language', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'Anime German DL';
 
-insert into condition_languages (custom_format_name. condition_name, language_name, except_language)
+insert into condition_languages (custom_format_name, condition_name, language_name, except_language)
 select 'Anime German DL', 'Japanese', l.name, 0
 from languages l
 where l.name = 'Japanese';
@@ -273,7 +273,7 @@ select cf.name, 'Chinese', 'language', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'Anime German DL';
 
-insert into condition_languages (custom_format_name. condition_name, language_name, except_language)
+insert into condition_languages (custom_format_name, condition_name, language_name, except_language)
 select 'Anime German DL', 'Chinese', l.name, 0
 from languages l
 where l.name = 'Chinese';
@@ -283,7 +283,7 @@ select cf.name, 'Korean', 'language', 'all', 0, 0
 from custom_formats cf
 where cf.name = 'Anime German DL';
 
-insert into condition_languages (custom_format_name. condition_name, language_name, except_language)
+insert into condition_languages (custom_format_name, condition_name, language_name, except_language)
 select 'Anime German DL', 'Korean', l.name, 0
 from languages l
 where l.name = 'Korean';
