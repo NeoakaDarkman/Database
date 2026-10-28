@@ -226,6 +226,15 @@ insert into tags (name) values ('Release Title') on conflict (name) do nothing;
 -- --- END op 6873
 
 -- ---BEGIN op 6874 ( create custom_format Anime German DL )
+delete from custom_formats where name = 'Anime German DL';
+delete from custom_format_conditions where custom_format_name = 'Anime German DL';
+delete from custom_format_tags where custom_format_name = 'Anime German DL';
+delete from condition_languages where custom_format_name = 'Anime German DL';
+delete from condition_patterns where custom_format_name = 'Anime German DL';
+delete from condition_quality_modifiers where custom_format_name = 'Anime German DL';
+delete from condition_resolutions where custom_format_name = 'Anime German DL';
+delete from condition_sources where custom_format_name = 'Anime German DL';
+
 insert into custom_formats (name, description) values ('Anime German DL', '');
 
 insert into custom_format_tags (custom_format_name, tag_name) 
@@ -290,6 +299,15 @@ where l.name = 'Korean';
 -- --- END op 6874
 
 -- --- BEGIN op 6875 ( create custom_format German 1080p Booster )
+delete from custom_formats where name = 'German 1080p Booster';
+delete from custom_format_conditions where custom_format_name = 'German 1080p Booster';
+delete from custom_format_tags where custom_format_name = 'German 1080p Booster';
+delete from condition_languages where custom_format_name = 'German 1080p Booster';
+delete from condition_patterns where custom_format_name = 'German 1080p Booster';
+delete from condition_quality_modifiers where custom_format_name = 'German 1080p Booster';
+delete from condition_resolutions where custom_format_name = 'German 1080p Booster';
+delete from condition_sources where custom_format_name = 'German 1080p Booster';
+
 insert into custom_formats (name, description) values ('German 1080p Booster', '');
 
 insert into custom_format_tags (custom_format_name, tag_name)
@@ -332,6 +350,15 @@ values ('German 1080p Booster', '1080p', '1080p');
 -- --- END op 6875
 
 -- --- BEGIN op 6876 ( create custom_format German 2160p Booster )
+delete from custom_formats where name = 'German 2160p Booster';
+delete from custom_format_conditions where custom_format_name = 'German 2160p Booster';
+delete from custom_format_tags where custom_format_name = 'German 2160p Booster';
+delete from condition_languages where custom_format_name = 'German 2160p Booster';
+delete from condition_patterns where custom_format_name = 'German 2160p Booster';
+delete from condition_quality_modifiers where custom_format_name = 'German 2160p Booster';
+delete from condition_resolutions where custom_format_name = 'German 2160p Booster';
+delete from condition_sources where custom_format_name = 'German 2160p Booster';
+
 insert into custom_formats (name, description) values ('German 2160p Booster', '');
 
 insert into custom_format_tags (custom_format_name, tag_name)
@@ -374,6 +401,15 @@ values ('German 2160p Booster', '2160p', '2160p');
 -- --- END op 6876
 
 -- --- BEGIN op 6877 ( create custom_format German Anime Tier 01 )
+delete from custom_formats where name = 'German Anime Tier 01';
+delete from custom_format_conditions where custom_format_name = 'German Anime Tier 01';
+delete from custom_format_tags where custom_format_name = 'German Anime Tier 01';
+delete from condition_languages where custom_format_name = 'German Anime Tier 01';
+delete from condition_patterns where custom_format_name = 'German Anime Tier 01';
+delete from condition_quality_modifiers where custom_format_name = 'German Anime Tier 01';
+delete from condition_resolutions where custom_format_name = 'German Anime Tier 01';
+delete from condition_sources where custom_format_name = 'German Anime Tier 01';
+
 insert into custom_formats (name, description) values ('German Anime Tier 01', '');
 
 insert into custom_format_tags (custom_format_name, tag_name)
@@ -403,6 +439,15 @@ where re.name = 'German Anime Tier 01';
 -- --- END op 6877
 
 -- --- BEGIN op 6878 ( create custom_format German Anime Tier 02 )
+delete from custom_formats where name = 'German Anime Tier 02';
+delete from custom_format_conditions where custom_format_name = 'German Anime Tier 02';
+delete from custom_format_tags where custom_format_name = 'German Anime Tier 02';
+delete from condition_languages where custom_format_name = 'German Anime Tier 02';
+delete from condition_patterns where custom_format_name = 'German Anime Tier 02';
+delete from condition_quality_modifiers where custom_format_name = 'German Anime Tier 02';
+delete from condition_resolutions where custom_format_name = 'German Anime Tier 02';
+delete from condition_sources where custom_format_name = 'German Anime Tier 02';
+
 insert into custom_formats (name, description) values ('German Anime Tier 02', '');
 
 insert into custom_format_tags (custom_format_name, tag_name)
@@ -432,6 +477,15 @@ where re.name = 'German Anime Tier 02';
 -- --- END op 6878
 
 -- --- BEGIN op 6879 ( create custom_format German Bluray Tier 01 )
+delete from custom_formats where name = 'German Bluray Tier 01';
+delete from custom_format_conditions where custom_format_name = 'German Bluray Tier 01';
+delete from custom_format_tags where custom_format_name = 'German Bluray Tier 01';
+delete from condition_languages where custom_format_name = 'German Bluray Tier 01';
+delete from condition_patterns where custom_format_name = 'German Bluray Tier 01';
+delete from condition_quality_modifiers where custom_format_name = 'German Bluray Tier 01';
+delete from condition_resolutions where custom_format_name = 'German Bluray Tier 01';
+delete from condition_sources where custom_format_name = 'German Bluray Tier 01';
+
 insert into custom_formats (name, description) values ('German Bluray Tier 01', '');
 
 insert into custom_format_tags (custom_format_name, tag_name)
@@ -472,6 +526,15 @@ values ('German Bluray Tier 01', 'Not Remux', 'remux');
 -- --- END op 6879
 
 -- --- BEGIN op 6880 ( create custom_format German Bluray Tier 02 )
+delete from custom_formats where name = 'German Bluray Tier 02';
+delete from custom_format_conditions where custom_format_name = 'German Bluray Tier 02';
+delete from custom_format_tags where custom_format_name = 'German Bluray Tier 02';
+delete from condition_languages where custom_format_name = 'German Bluray Tier 02';
+delete from condition_patterns where custom_format_name = 'German Bluray Tier 02';
+delete from condition_quality_modifiers where custom_format_name = 'German Bluray Tier 02';
+delete from condition_resolutions where custom_format_name = 'German Bluray Tier 02';
+delete from condition_sources where custom_format_name = 'German Bluray Tier 02';
+
 insert into custom_formats (name, description) values ('German Bluray Tier 02', '');
 
 insert into custom_format_tags (custom_format_name, tag_name)
@@ -512,6 +575,15 @@ values ('German Bluray Tier 02', 'Not Remux', 'remux');
 -- --- END op 6880
 
 -- --- BEGIN op 6881 ( create custom_format German Bluray Tier 03 )
+delete from custom_formats where name = 'German Bluray Tier 03';
+delete from custom_format_conditions where custom_format_name = 'German Bluray Tier 03';
+delete from custom_format_tags where custom_format_name = 'German Bluray Tier 03';
+delete from condition_languages where custom_format_name = 'German Bluray Tier 03';
+delete from condition_patterns where custom_format_name = 'German Bluray Tier 03';
+delete from condition_quality_modifiers where custom_format_name = 'German Bluray Tier 03';
+delete from condition_resolutions where custom_format_name = 'German Bluray Tier 03';
+delete from condition_sources where custom_format_name = 'German Bluray Tier 03';
+
 insert into custom_formats (name, description) values ('German Bluray Tier 03', '');
 
 insert into custom_format_tags (custom_format_name, tag_name)
@@ -552,6 +624,15 @@ values ('German Bluray Tier 03', 'Not Remux', 'remux');
 -- --- END op 6881
 
 -- --- BEGIN op 6882 ( create custom_format German DL (undefined) )
+delete from custom_formats where name = 'German DL (undefined)';
+delete from custom_format_conditions where custom_format_name = 'German DL (undefined)';
+delete from custom_format_tags where custom_format_name = 'German DL (undefined)';
+delete from condition_languages where custom_format_name = 'German DL (undefined)';
+delete from condition_patterns where custom_format_name = 'German DL (undefined)';
+delete from condition_quality_modifiers where custom_format_name = 'German DL (undefined)';
+delete from condition_resolutions where custom_format_name = 'German DL (undefined)';
+delete from condition_sources where custom_format_name = 'German DL (undefined)';
+
 insert into custom_formats (name, description) values ('German DL (undefined)', '');
 
 insert into custom_format_tags (custom_format_name, tag_name)
@@ -591,6 +672,15 @@ where re.name = 'ML';
 -- --- END op 6882
 
 -- --- BEGIN op 6883 ( create custom_format German DL )
+delete from custom_formats where name = 'German DL';
+delete from custom_format_conditions where custom_format_name = 'German DL';
+delete from custom_format_tags where custom_format_name = 'German DL';
+delete from condition_languages where custom_format_name = 'German DL';
+delete from condition_patterns where custom_format_name = 'German DL';
+delete from condition_quality_modifiers where custom_format_name = 'German DL';
+delete from condition_resolutions where custom_format_name = 'German DL';
+delete from condition_sources where custom_format_name = 'German DL';
+
 insert into custom_formats (name, description) values ('German DL', '');
 
 insert into custom_format_tags (custom_format_name, tag_name)
@@ -620,6 +710,15 @@ where l.name = 'Original';
 -- --- END op 6883
 
 -- --- BEGIN op 6884 ( create custom_format German LQ (Release Title) )
+delete from custom_formats where name = 'German LQ (Release Title)';
+delete from custom_format_conditions where custom_format_name = 'German LQ (Release Title)';
+delete from custom_format_tags where custom_format_name = 'German LQ (Release Title)';
+delete from condition_languages where custom_format_name = 'German LQ (Release Title)';
+delete from condition_patterns where custom_format_name = 'German LQ (Release Title)';
+delete from condition_quality_modifiers where custom_format_name = 'German LQ (Release Title)';
+delete from condition_resolutions where custom_format_name = 'German LQ (Release Title)';
+delete from condition_sources where custom_format_name = 'German LQ (Release Title)';
+
 insert into custom_formats (name, description) values ('German LQ (Release Title)', '');
 
 insert into custom_format_tags (custom_format_name, tag_name)
@@ -669,6 +768,15 @@ where re.name = 'Double German Tag';
 -- --- END op 6884
 
 -- --- BEGIN op 6885 ( create custom_format German LQ )
+delete from custom_formats where name = 'German LQ';
+delete from custom_format_conditions where custom_format_name = 'German LQ';
+delete from custom_format_tags where custom_format_name = 'German LQ';
+delete from condition_languages where custom_format_name = 'German LQ';
+delete from condition_patterns where custom_format_name = 'German LQ';
+delete from condition_quality_modifiers where custom_format_name = 'German LQ';
+delete from condition_resolutions where custom_format_name = 'German LQ';
+delete from condition_sources where custom_format_name = 'German LQ';
+
 insert into custom_formats (name, description) values ('German LQ', '');
 
 insert into custom_format_tags (custom_format_name, tag_name)
@@ -698,6 +806,15 @@ where re.name = 'German LQ';
 -- --- END op 6885
 
 -- --- BEGIN op 6886 ( create custom_format German Microsized )
+delete from custom_formats where name = 'German Microsized';
+delete from custom_format_conditions where custom_format_name = 'German Microsized';
+delete from custom_format_tags where custom_format_name = 'German Microsized';
+delete from condition_languages where custom_format_name = 'German Microsized';
+delete from condition_patterns where custom_format_name = 'German Microsized';
+delete from condition_quality_modifiers where custom_format_name = 'German Microsized';
+delete from condition_resolutions where custom_format_name = 'German Microsized';
+delete from condition_sources where custom_format_name = 'German Microsized';
+
 insert into custom_formats (name, description) values ('German Microsized', '');
 
 insert into custom_format_tags (custom_format_name, tag_name)
@@ -727,6 +844,15 @@ where re.name = 'German Microsized';
 -- --- END op 6886
 
 -- --- BEGIN op 6887 ( create custom_format German Remux Tier 01 )
+delete from custom_formats where name = 'German Remux Tier 01';
+delete from custom_format_conditions where custom_format_name = 'German Remux Tier 01';
+delete from custom_format_tags where custom_format_name = 'German Remux Tier 01';
+delete from condition_languages where custom_format_name = 'German Remux Tier 01';
+delete from condition_patterns where custom_format_name = 'German Remux Tier 01';
+delete from condition_quality_modifiers where custom_format_name = 'German Remux Tier 01';
+delete from condition_resolutions where custom_format_name = 'German Remux Tier 01';
+delete from condition_sources where custom_format_name = 'German Remux Tier 01';
+
 insert into custom_formats (name, description) values ('German Remux Tier 01', '');
 
 insert into custom_format_tags (custom_format_name, tag_name)
@@ -759,6 +885,15 @@ values ('German Remux Tier 01', 'Remux', 'remux');
 -- --- END op 6887
 
 -- --- BEGIN  op 6888 ( create custom_format German Remux Tier 02 )
+delete from custom_formats where name = 'German Remux Tier 02';
+delete from custom_format_conditions where custom_format_name = 'German Remux Tier 02';
+delete from custom_format_tags where custom_format_name = 'German Remux Tier 02';
+delete from condition_languages where custom_format_name = 'German Remux Tier 02';
+delete from condition_patterns where custom_format_name = 'German Remux Tier 02';
+delete from condition_quality_modifiers where custom_format_name = 'German Remux Tier 02';
+delete from condition_resolutions where custom_format_name = 'German Remux Tier 02';
+delete from condition_sources where custom_format_name = 'German Remux Tier 02';
+
 insert into custom_formats (name, description) values ('German Remux Tier 02', '');
 
 insert into custom_format_tags (custom_format_name, tag_name)
@@ -791,6 +926,15 @@ values ('German Remux Tier 02', 'Remux', 'remux');
 -- --- END op 6888
 
 -- --- BEGIN op 6889 ( create custom_format German Scene )
+delete from custom_formats where name = 'German Scene';
+delete from custom_format_conditions where custom_format_name = 'German Scene';
+delete from custom_format_tags where custom_format_name = 'German Scene';
+delete from condition_languages where custom_format_name = 'German Scene';
+delete from condition_patterns where custom_format_name = 'German Scene';
+delete from condition_quality_modifiers where custom_format_name = 'German Scene';
+delete from condition_resolutions where custom_format_name = 'German Scene';
+delete from condition_sources where custom_format_name = 'German Scene';
+
 insert into custom_formats (name, description) values ('German Scene', '');
 
 insert into custom_format_tags (custom_format_name, tag_name)
@@ -815,6 +959,15 @@ where re.name = 'German Scene';
 -- --- END op 6889
 
 -- --- BEGIN op 6890 ( create custom_format German Web Tier 01 )
+delete from custom_formats where name = 'German Web Tier 01';
+delete from custom_format_conditions where custom_format_name = 'German Web Tier 01';
+delete from custom_format_tags where custom_format_name = 'German Web Tier 01';
+delete from condition_languages where custom_format_name = 'German Web Tier 01';
+delete from condition_patterns where custom_format_name = 'German Web Tier 01';
+delete from condition_quality_modifiers where custom_format_name = 'German Web Tier 01';
+delete from condition_resolutions where custom_format_name = 'German Web Tier 01';
+delete from condition_sources where custom_format_name = 'German Web Tier 01';
+
 insert into custom_formats (name, description) values ('German Web Tier 01', '');
 
 insert into custom_format_tags (custom_format_name, tag_name)
@@ -839,6 +992,15 @@ where re.name = 'German Web Tier 01';
 -- --- END op 6890
 
 -- --- BEGIN op 6891 ( create custom_format German Web Tier 02 )
+delete from custom_formats where name = 'German Web Tier 02';
+delete from custom_format_conditions where custom_format_name = 'German Web Tier 02';
+delete from custom_format_tags where custom_format_name = 'German Web Tier 02';
+delete from condition_languages where custom_format_name = 'German Web Tier 02';
+delete from condition_patterns where custom_format_name = 'German Web Tier 02';
+delete from condition_quality_modifiers where custom_format_name = 'German Web Tier 02';
+delete from condition_resolutions where custom_format_name = 'German Web Tier 02';
+delete from condition_sources where custom_format_name = 'German Web Tier 02';
+
 insert into custom_formats (name, description) values ('German Web Tier 02', '');
 
 insert into custom_format_tags (custom_format_name, tag_name)
@@ -863,6 +1025,15 @@ where re.name = 'German Web Tier 02';
 -- --- END op 6891
 
 -- --- BEGIN op 6892 ( create custom_format German Web Tier 03 )
+delete from custom_formats where name = 'German Web Tier 03';
+delete from custom_format_conditions where custom_format_name = 'German Web Tier 03';
+delete from custom_format_tags where custom_format_name = 'German Web Tier 03';
+delete from condition_languages where custom_format_name = 'German Web Tier 03';
+delete from condition_patterns where custom_format_name = 'German Web Tier 03';
+delete from condition_quality_modifiers where custom_format_name = 'German Web Tier 03';
+delete from condition_resolutions where custom_format_name = 'German Web Tier 03';
+delete from condition_sources where custom_format_name = 'German Web Tier 03';
+
 insert into custom_formats (name, description) values ('German Web Tier 03', '');
 
 insert into custom_format_tags (custom_format_name, tag_name)
@@ -887,6 +1058,15 @@ where re.name = 'German Web Tier 03';
 -- --- END op 6892
 
 -- --- BEGIN op 6893 ( create custom_format German )
+delete from custom_formats where name = 'German';
+delete from custom_format_conditions where custom_format_name = 'German';
+delete from custom_format_tags where custom_format_name = 'German';
+delete from condition_languages where custom_format_name = 'German';
+delete from condition_patterns where custom_format_name = 'German';
+delete from condition_quality_modifiers where custom_format_name = 'German';
+delete from condition_resolutions where custom_format_name = 'German';
+delete from condition_sources where custom_format_name = 'German';
+
 insert into custom_formats (name, description) values ('German', '');
 
 insert into custom_format_tags (custom_format_name, tag_name)
@@ -946,6 +1126,15 @@ where re.name = 'Not Subbed';
 -- --- END op 6893
 
 -- --- BEGIN op 6894 ( create custom_format Not German or English )
+delete from custom_formats where name = 'Not German or English';
+delete from custom_format_conditions where custom_format_name = 'Not German or English';
+delete from custom_format_tags where custom_format_name = 'Not German or English';
+delete from condition_languages where custom_format_name = 'Not German or English';
+delete from condition_patterns where custom_format_name = 'Not German or English';
+delete from condition_quality_modifiers where custom_format_name = 'Not German or English';
+delete from condition_resolutions where custom_format_name = 'Not German or English';
+delete from condition_sources where custom_format_name = 'Not German or English';
+
 insert into custom_formats (name, description) values ('Not German or English', '');
 
 insert into custom_format_tags (custom_format_name, tag_name)
@@ -990,6 +1179,15 @@ where re.name = 'Not German in Title';
 -- --- END op 6894
 
 -- --- BEGIN op 6895 ( create custom_format x264 )
+delete from custom_formats where name = 'x264';
+delete from custom_format_conditions where custom_format_name = 'x264';
+delete from custom_format_tags where custom_format_name = 'x264';
+delete from condition_languages where custom_format_name = 'x264';
+delete from condition_patterns where custom_format_name = 'x264';
+delete from condition_quality_modifiers where custom_format_name = 'x264';
+delete from condition_resolutions where custom_format_name = 'x264';
+delete from condition_sources where custom_format_name = 'x264';
+
 insert into custom_formats (name, description) values ('x264', 'Matches ''x264'' regex pattern.');
 
 insert into custom_format_tags (custom_format_name, tag_name)
@@ -1019,6 +1217,15 @@ where re.name = 'h264';
 -- --- END op 6895
 
 -- --- BEGIN op 6896 ( create custom_format x265 )
+delete from custom_formats where name = 'x265';
+delete from custom_format_conditions where custom_format_name = 'x265';
+delete from custom_format_tags where custom_format_name = 'x265';
+delete from condition_languages where custom_format_name = 'x265';
+delete from condition_patterns where custom_format_name = 'x265';
+delete from condition_quality_modifiers where custom_format_name = 'x265';
+delete from condition_resolutions where custom_format_name = 'x265';
+delete from condition_sources where custom_format_name = 'x265';
+
 insert into custom_formats (name, description) values ('x265', 'Matches ''x265'' regex pattern.');
 
 insert into custom_format_tags (custom_format_name, tag_name)
