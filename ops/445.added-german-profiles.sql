@@ -1845,7 +1845,7 @@ where qp.name = 'TV 2160p' and cf.name = 'German Microsized';
 -- --- END op 6903
 
 -- --- BEGIN op 6904 (update LQ 1080p Profile)
-update quality_profiles set upgrade_until_score = 120 where name = 'LQ 1080p';
+update quality_profiles set minimum_custom_format_score = 120 where name = 'LQ 1080p';
 
 insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 select qp.name, cf.name, 'all', 100
