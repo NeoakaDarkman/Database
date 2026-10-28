@@ -1255,8 +1255,8 @@ where re.name = 'h265';
 -- --- END op 6896
 
 -- --- BEGIN op 6897 ( update Anime 1080p to include german language )
-update quality_profile_custom_formats set score = 500
-where quality_profile_name = 'Anime 1080p' and custom_format_name = 'Anime Dual Audio';
+delete from quality_profile_custom_formats where quality_profile_name = 'Anime 1080p' and custom_format_name = 'Season Pack';
+delete from quality_profile_custom_formats where quality_profile_name = 'Anime 1080p' and custom_format_name = 'x265';
 
 insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 select qp.name, cf.name, 'all', 3000
@@ -1302,11 +1302,11 @@ where quality_profile_name = 'Movies 1080p HQ' and custom_format_name = 'WEB Tie
 update quality_profile_custom_formats set score = 1600
 where quality_profile_name = 'Movies 1080p HQ' and custom_format_name = 'WEB Tier 03';
 
-delete from quality_profile_custom_formats
-where quality_profile_name = 'Movies 1080p HQ' and custom_format_name = 'AV1';
+update quality_profile_custom_formats set score = -50
+where quality_profile_name = 'Movies 1080p HQ' and custom_format_name = 'Missing Subtitles';
 
-delete from quality_profile_custom_formats
-where quality_profile_name = 'Movies 1080p HQ' and custom_format_name = 'x265';
+update quality_profile_custom_formats set score = -35000
+where quality_profile_name = 'Movies 1080p HQ' and custom_format_name = 'Not German or English';
 
 insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 select qp.name, cf.name, 'radarr', 6000
@@ -1356,37 +1356,12 @@ where qp.name = 'Movies 1080p HQ' and cf.name = 'German Web Tier 03';
 insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 select qp.name, cf.name, 'radarr', 1700
 from quality_profiles qp, custom_formats cf
-where qp.name = 'TV 1080p' and cf.name = 'German Scene';
+where qp.name = 'Movies 1080p HQ' and cf.name = 'German Scene';
 
 insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 select qp.name, cf.name, 'radarr', 650
 from quality_profiles qp, custom_formats cf
 where qp.name = 'Movies 1080p HQ' and cf.name = 'German 1080p Booster';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', 500
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 1080p HQ' and cf.name = 'x265';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', 101
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 1080p HQ' and cf.name = 'x264';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', 50
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 1080p HQ' and cf.name = '1080p';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', 5
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 1080p HQ' and cf.name = '720p';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', -50
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 1080p HQ' and cf.name = 'Missing Subtitles';
 
 insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 select qp.name, cf.name, 'radarr', -10000
@@ -1402,11 +1377,6 @@ insert into quality_profile_custom_formats (quality_profile_name, custom_format_
 select qp.name, cf.name, 'radarr', -10000
 from quality_profiles qp, custom_formats cf
 where qp.name = 'Movies 1080p HQ' and cf.name = 'German Microsized';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', -35000
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 1080p HQ' and cf.name = 'Not German or English';
 -- --- END op 6898
 
 -- --- BEGIN op 6899 ( update Movies 1080p to include german language )
@@ -1422,11 +1392,11 @@ where quality_profile_name = 'Movies 1080p' and custom_format_name = 'WEB Tier 0
 update quality_profile_custom_formats set score = 1600
 where quality_profile_name = 'Movies 1080p' and custom_format_name = 'WEB Tier 03';
 
-delete from quality_profile_custom_formats
-where quality_profile_name = 'Movies 1080p' and custom_format_name = 'AV1';
+update quality_profile_custom_formats set score = -50
+where quality_profile_name = 'Movies 1080p' and custom_format_name = 'Missing Subtitles';
 
-delete from quality_profile_custom_formats
-where quality_profile_name = 'Movies 1080p' and custom_format_name = 'x265';
+update quality_profile_custom_formats set score = -35000
+where quality_profile_name = 'Movies 1080p' and custom_format_name = 'Not German or English';
 
 insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 select qp.name, cf.name, 'radarr', 6000
@@ -1476,37 +1446,12 @@ where qp.name = 'Movies 1080p' and cf.name = 'German Web Tier 03';
 insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 select qp.name, cf.name, 'radarr', 1700
 from quality_profiles qp, custom_formats cf
-where qp.name = 'TV 1080p' and cf.name = 'German Scene';
+where qp.name = 'Movies 1080p' and cf.name = 'German Scene';
 
 insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 select qp.name, cf.name, 'radarr', 650
 from quality_profiles qp, custom_formats cf
 where qp.name = 'Movies 1080p' and cf.name = 'German 1080p Booster';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', 500
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 1080p' and cf.name = 'x265';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', 101
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 1080p' and cf.name = 'x264';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', 50
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 1080p' and cf.name = '1080p';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', 5
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 1080p' and cf.name = '720p';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', -50
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 1080p' and cf.name = 'Missing Subtitles';
 
 insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 select qp.name, cf.name, 'radarr', -10000
@@ -1522,11 +1467,6 @@ insert into quality_profile_custom_formats (quality_profile_name, custom_format_
 select qp.name, cf.name, 'radarr', -10000
 from quality_profiles qp, custom_formats cf
 where qp.name = 'Movies 1080p' and cf.name = 'German Microsized';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', -35000
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 1080p' and cf.name = 'Not German or English';
 -- --- END op 6899
 
 -- --- BEGIN op 6900 ( update Movies 2160p HQ to include german language )
@@ -1542,11 +1482,11 @@ where quality_profile_name = 'Movies 2160p HQ' and custom_format_name = 'WEB Tie
 update quality_profile_custom_formats set score = 1600
 where quality_profile_name = 'Movies 2160p HQ' and custom_format_name = 'WEB Tier 03';
 
-delete from quality_profile_custom_formats
-where quality_profile_name = 'Movies 2160p HQ' and custom_format_name = 'AV1';
+update quality_profile_custom_formats set score = -50
+where quality_profile_name = 'Movies 2160p HQ' and custom_format_name = 'Missing Subtitles';
 
-delete from quality_profile_custom_formats
-where quality_profile_name = 'Movies 2160p HQ' and custom_format_name = 'x265';
+update quality_profile_custom_formats set score = -35000
+where quality_profile_name = 'Movies 2160p HQ' and custom_format_name = 'Not German or English';
 
 insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 select qp.name, cf.name, 'radarr', 9000
@@ -1601,42 +1541,12 @@ where qp.name = 'Movies 2160p HQ' and cf.name = 'German Web Tier 03';
 insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 select qp.name, cf.name, 'radarr', 1700
 from quality_profiles qp, custom_formats cf
-where qp.name = 'TV 2160p' and cf.name = 'German Scene';
+where qp.name = 'Movies 2160p HQ' and cf.name = 'German Scene';
 
 insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 select qp.name, cf.name, 'radarr', 600
 from quality_profiles qp, custom_formats cf
 where qp.name = 'Movies 2160p HQ' and cf.name = 'German 1080p Booster';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', 500
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 2160p HQ' and cf.name = 'x265';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', 101
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 2160p HQ' and cf.name = 'x264';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', 100
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 2160p HQ' and cf.name = '2160p';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', 100
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 2160p HQ' and cf.name = '1080p';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', 5
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 2160p HQ' and cf.name = '720p';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', -50
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 2160p HQ' and cf.name = 'Missing Subtitles';
 
 insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 select qp.name, cf.name, 'radarr', -10000
@@ -1652,11 +1562,6 @@ insert into quality_profile_custom_formats (quality_profile_name, custom_format_
 select qp.name, cf.name, 'radarr', -10000
 from quality_profiles qp, custom_formats cf
 where qp.name = 'Movies 2160p HQ' and cf.name = 'German Microsized';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', -35000
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 2160p HQ' and cf.name = 'Not German or English';
 -- --- END op 6900
 
 -- --- BEGIN op 6901 ( update Movies 2160p to include german language )
@@ -1672,11 +1577,11 @@ where quality_profile_name = 'Movies 2160p' and custom_format_name = 'WEB Tier 0
 update quality_profile_custom_formats set score = 1600
 where quality_profile_name = 'Movies 2160p' and custom_format_name = 'WEB Tier 03';
 
-delete from quality_profile_custom_formats
-where quality_profile_name = 'Movies 2160p' and custom_format_name = 'AV1';
+update quality_profile_custom_formats set score = -50
+where quality_profile_name = 'Movies 2160p' and custom_format_name = 'Missing Subtitles';
 
-delete from quality_profile_custom_formats
-where quality_profile_name = 'Movies 2160p' and custom_format_name = 'x265';
+update quality_profile_custom_formats set score = -35000
+where quality_profile_name = 'Movies 2160p' and custom_format_name = 'Not German or English';
 
 insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 select qp.name, cf.name, 'radarr', 9000
@@ -1731,42 +1636,12 @@ where qp.name = 'Movies 2160p' and cf.name = 'German Web Tier 03';
 insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 select qp.name, cf.name, 'radarr', 1700
 from quality_profiles qp, custom_formats cf
-where qp.name = 'TV 2160p' and cf.name = 'German Scene';
+where qp.name = 'Movies 2160p' and cf.name = 'German Scene';
 
 insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 select qp.name, cf.name, 'radarr', 600
 from quality_profiles qp, custom_formats cf
 where qp.name = 'Movies 2160p' and cf.name = 'German 1080p Booster';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', 500
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 2160p' and cf.name = 'x265';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', 101
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 2160p' and cf.name = 'x264';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', 100
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 2160p' and cf.name = '2160p';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', 100
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 2160p' and cf.name = '1080p';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', 5
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 2160p' and cf.name = '720p';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', -50
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 2160p' and cf.name = 'Missing Subtitles';
 
 insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 select qp.name, cf.name, 'radarr', -10000
@@ -1782,11 +1657,6 @@ insert into quality_profile_custom_formats (quality_profile_name, custom_format_
 select qp.name, cf.name, 'radarr', -10000
 from quality_profiles qp, custom_formats cf
 where qp.name = 'Movies 2160p' and cf.name = 'German Microsized';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'radarr', -35000
-from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 2160p' and cf.name = 'Not German or English';
 -- --- END op 6901
 
 -- --- BEGIN op 6902 ( update TV 1080p to include german language )
@@ -1802,8 +1672,11 @@ where quality_profile_name = 'TV 1080p' and custom_format_name = 'WEB Tier 02';
 update quality_profile_custom_formats set score = 1600
 where quality_profile_name = 'TV 1080p' and custom_format_name = 'WEB Tier 03';
 
-delete from quality_profile_custom_formats
-where quality_profile_name = 'TV 1080p' and custom_format_name = 'x265';
+update quality_profile_custom_formats set score = -50
+where quality_profile_name = 'TV 1080p' and custom_format_name = 'Missing Subtitles';
+
+update quality_profile_custom_formats set score = -35000
+where quality_profile_name = 'TV 1080p' and custom_format_name = 'Not German or English';
 
 insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 select qp.name, cf.name, 'sonarr', 6000
@@ -1861,31 +1734,6 @@ from quality_profiles qp, custom_formats cf
 where qp.name = 'TV 1080p' and cf.name = 'German 1080p Booster';
 
 insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'sonarr', 500
-from quality_profiles qp, custom_formats cf
-where qp.name = 'TV 1080p' and cf.name = 'x265';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'sonarr', 101
-from quality_profiles qp, custom_formats cf
-where qp.name = 'TV 1080p' and cf.name = 'x264';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'sonarr', 50
-from quality_profiles qp, custom_formats cf
-where qp.name = 'TV 1080p' and cf.name = '1080p';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'sonarr', 5
-from quality_profiles qp, custom_formats cf
-where qp.name = 'TV 1080p' and cf.name = '720p';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'sonarr', -50
-from quality_profiles qp, custom_formats cf
-where qp.name = 'TV 1080p' and cf.name = 'Missing Subtitles';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 select qp.name, cf.name, 'sonarr', -10000
 from quality_profiles qp, custom_formats cf
 where qp.name = 'TV 1080p' and cf.name = 'German LQ';
@@ -1899,11 +1747,6 @@ insert into quality_profile_custom_formats (quality_profile_name, custom_format_
 select qp.name, cf.name, 'sonarr', -10000
 from quality_profiles qp, custom_formats cf
 where qp.name = 'TV 1080p' and cf.name = 'German Microsized';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'sonarr', -35000
-from quality_profiles qp, custom_formats cf
-where qp.name = 'TV 1080p' and cf.name = 'Not German or English';
 -- --- END op 6902
 
 -- --- BEGIN op 6903 ( update TV 2160p to include german language )
@@ -1919,13 +1762,16 @@ where quality_profile_name = 'TV 2160p' and custom_format_name = 'WEB Tier 02';
 update quality_profile_custom_formats set score = 1600
 where quality_profile_name = 'TV 2160p' and custom_format_name = 'WEB Tier 03';
 
-delete from quality_profile_custom_formats
-where quality_profile_name = 'TV 2160p' and custom_format_name = 'x265';
+update quality_profile_custom_formats set score = -50
+where quality_profile_name = 'TV 2160p' and custom_format_name = 'Missing Subtitles';
+
+update quality_profile_custom_formats set score = -35000
+where quality_profile_name = 'TV 2160p' and custom_format_name = 'Not German or English';
 
 insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 select qp.name, cf.name, 'sonarr', 9000
 from quality_profiles qp, custom_formats cf
-where qp.name = 'Movies 2160p' and cf.name = 'German 2160p Booster';
+where qp.name = 'TV 2160p' and cf.name = 'German 2160p Booster';
 
 insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 select qp.name, cf.name, 'sonarr', 6000
@@ -1983,36 +1829,6 @@ from quality_profiles qp, custom_formats cf
 where qp.name = 'TV 2160p' and cf.name = 'German 1080p Booster';
 
 insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'sonarr', 500
-from quality_profiles qp, custom_formats cf
-where qp.name = 'TV 2160p' and cf.name = 'x265';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'sonarr', 101
-from quality_profiles qp, custom_formats cf
-where qp.name = 'TV 2160p' and cf.name = 'x264';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'sonarr', 100
-from quality_profiles qp, custom_formats cf
-where qp.name = 'TV 2160p' and cf.name = '2160p';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'sonarr', 50
-from quality_profiles qp, custom_formats cf
-where qp.name = 'TV 2160p' and cf.name = '1080p';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'sonarr', 5
-from quality_profiles qp, custom_formats cf
-where qp.name = 'TV 2160p' and cf.name = '720p';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'sonarr', -50
-from quality_profiles qp, custom_formats cf
-where qp.name = 'TV 2160p' and cf.name = 'Missing Subtitles';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
 select qp.name, cf.name, 'sonarr', -10000
 from quality_profiles qp, custom_formats cf
 where qp.name = 'TV 2160p' and cf.name = 'German LQ';
@@ -2026,9 +1842,4 @@ insert into quality_profile_custom_formats (quality_profile_name, custom_format_
 select qp.name, cf.name, 'sonarr', -10000
 from quality_profiles qp, custom_formats cf
 where qp.name = 'TV 2160p' and cf.name = 'German Microsized';
-
-insert into quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-select qp.name, cf.name, 'sonarr', -35000
-from quality_profiles qp, custom_formats cf
-where qp.name = 'TV 2160p' and cf.name = 'Not German or English';
 -- --- END op 6903
